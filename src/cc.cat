@@ -12,6 +12,6 @@ load libast::_
 #    ast:codegen context
 # end
 
-expose def main args->list
-    args.first | read | lex | parse | codegen context:dump()
+expose def main args->List
+    args.first | read | lex | parse | codegen Context:dump()
 end
