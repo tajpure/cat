@@ -1,0 +1,17 @@
+load std::lang::_
+load std::io::_
+load std::lib::_
+load libcc::_
+load libast::_
+
+# def source->str to_ast => AST
+#    source | parse
+# end
+
+# def ast->AST gen context->Context
+#    ast:codegen context
+# end
+
+expose def main args->list
+    args.first | read | lex | parse | codegen context:dump()
+end
